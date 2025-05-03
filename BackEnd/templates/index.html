@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Medicine</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+        background-color: lightpink;
+        height: 75px;
+    }
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        font-size: 18px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #f95aa7;
+    }
+    
+    a:hover {
+        color: #fd0000;
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        gap: 4px;
+    }
+    
+    .logo img {
+        border-radius: 50%;
+    }
+    
+    .logo p {
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bolder;
+        color: #fd0000;
+    }
+
+    form .btn {
+        border-radius: 4px;
+        background-color: #f95aa7;
+        padding: 5px;
+        margin-top: 5px;
+        border: 2px solid black;
+    }
+    .results {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .results button{
+        border-radius: 4px;
+        background-color: #f95aa7;
+        padding: 5px;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: 900;
+        color: #fd0000;
+    }
+    .container {
+        background: #5ab1f9;
+        color: white;
+        margin-top: 4px;
+        padding: 50px;
+        border-radius: 15px;
+    }
+    
+    .form label {
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        color: #fd0000;
+        text-decoration: none;
+    }
+    
+    .form input {
+        width: 100%;
+        height: 30px;
+    }
+
+    .first {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 90vw;
+        height: 35rem;
+        margin: auto;
+    
+    }
+    
+    .first-text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 5px;
+    }
+    
+    .first-text>:nth-child(1) {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 45px;
+        font-weight: bold;
+        color: #fd0000;
+    }
+    
+    .first-text>:nth-child(2) {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 100;
+        color: #f95aa7;
+    }
+    
+    .first-img {
+        width: 40vw;
+        position: relative;
+        top: 3px;
+        z-index: 10; 
+    }
+    
+    .first-img> :nth-child(1){
+        top: 5px;
+        position: relative;
+    }
+    
+    .first-img img{
+        width: 40vw;
+    }
+    
+    .separation {
+        height: 7px;
+        background-color: rgba(42, 41, 41, 0.34);
+    
+    }
+    
+    .second {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 90vw;
+        height: 35rem;
+        margin: auto;
+        gap: 14px;
+        
+    }
+    
+    .second-text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 5px;
+    }
+    
+    .second-text>:nth-child(1) {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 45px;
+        font-weight: bold;
+        color: #fd0000;
+    }
+    
+    .second-text>:nth-child(2) {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 100;
+        color: #f95aa7;
+    }
+    
+    .second-img {
+        width: 40vw;
+        position: relative;
+        top: 3px;
+        z-index: 10; 
+    }
+    
+    .second-img img{
+        width: 40vw;
+    }
+    
+    .third {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 90vw;
+        height: 35rem;
+        margin: auto;
+    }
+    
+    .third-text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 5px;
+    }
+    
+    .third-text>:nth-child(1) {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 45px;
+        font-weight: bold;
+        color: #fd0000;
+    }
+    
+    .third-text>:nth-child(2) {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 100;
+        color: #f95aa7;
+    }
+    
+    .third-img {
+        width: 40vw;
+        position: relative;
+        top: 3px;
+        z-index: 10; 
+    }
+    
+    .third-img img{
+        width: 40vw;
+    }
+
+    .btn {
+        margin: 5px 43%;
+        width: 120px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img width="70px" src="{{ url_for('static', filename='MedLogo.jpg')}}" alt="Logo">
+                <p>MedAI</p>
+            </div>
+            <ul>
+                <a href="/">Home</a>
+                <a href="{{ url_for('login') }}">Log-In</a>
+                <a href="{{ url_for('about') }}">About Us</a>
+                <a href="{{ url_for('contact') }}">Contact Us</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="first">
+            <div class="first-text">
+                <span>Virtual HealthCare for you</span>
+                <span>MedAi provides easy and understandable AI interface, accessible online for everyone</span>
+            </div>
+            <div class="first-img">
+                
+                <img src="{{ url_for('static', filename='Med1.jpg')}}" alt="">
+            </div>
+        </div>
+        <div class="separation"></div>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <div class="second">
+            <div class="second-img">
+                
+                <img width="" src="{{ url_for('static', filename='Med2.jpg')}}" alt="">
+            </div>
+            <div class="second-text">
+                <span>Leading healthcare facilities within your reach</span>
+                <span>MedAi provides progressive and affordable healthcare accessible on our website for everyone. To us it's not just work. We take pride in the solution we deliver.</span>
+            </div>
+        </div>
+        <div class="separation"></div>
+        <div class="third">
+            <div class="third-text">
+                <span>Easy UI for users</span>
+                <span>Our dedicated patient engaging web portal allows you to access information instantaneously(no tedeous form, no long calls or administrative hassle) and securely.</span>
+            </div>
+            <div class="third-img">
+        
+                <img width="" src="{{ url_for('static', filename='Med3.jpg')}}" alt="">
+            </div>
+        </div>
+
+        <div class="btn">
+            <a href="{{ url_for('symptoms') }}">
+                <button type="button" class="btn btn-danger">Get Started</button>
+            </a>
+        </div>        
+    </main>
+</body>
+</html>

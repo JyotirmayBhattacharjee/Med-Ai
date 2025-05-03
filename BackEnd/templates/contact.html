@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        box-sizing: border-box;
+    }
+    
+    .contact {
+        position: relative;
+        min-height: 100vh;
+        padding: 50px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: wheat;
+    }
+    
+    .contact .content {
+        min-width: 800px;
+        text-align: center;
+    }
+    
+    .contact .content h2 {
+        font-size: 36px;
+        font-weight: 600;
+        color: #fd0000;
+    }
+    
+    .contact .content p {
+        font-weight: 300;
+        color: #330d39;
+        font-size: 25px;
+    }
+    
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    
+    .container .info {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container .info .box {
+        position: relative;
+        padding: 20px 0px;
+        display: flex;
+    }
+    
+    .container .info .box .icon {
+        min-width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        border: 2px solid black;
+        border-radius: 50%;
+        background: #fff;
+    }
+    
+    .container .info .box .text {
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        font-weight: 300;
+        color: rgb(108, 84, 6);
+        flex-direction: column;
+    }
+    
+    .container .info .box .text h3 {
+        font-weight: 800;
+        color: #fd0000;
+    }
+    
+    .form {
+        width: 40%;
+        padding: 40px;
+        background: #fff;
+        border: 2px solid black;
+        border-radius: 4px;
+    }
+    
+    .form h2 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #fd0000;
+    }
+    
+    .form .inputBox {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .form .inputBox input {
+        width: 100%;
+        padding: 5px 0px;
+        font-size: 16px;
+        margin: 10px;
+        border: none;
+        border-bottom: 2px solid black;
+        outline: none;
+    }
+    
+    .form .inputBox input,
+    .form .inputBox textarea {
+        width: 100%;
+        padding: 5px 0px;
+        font-size: 16px;
+        margin: 10px 0px;
+        border: none;
+        border-bottom: 2px solid black;
+        outline: none;
+        resize: none;
+    }
+    
+    .form .inputBox input:focus ~ span,
+    .form .inputBox input:valid ~ span,
+    .form .inputBox textarea:focus ~ span,
+    .form .inputBox textarea:valid ~ span {
+        font-size: 16px;
+        transform: translateY(-20px);
+    }
+    
+    .form .inputBox span {
+        position: absolute;
+        left: 0;
+        padding: 5px 0px;
+        font-size: 16px;
+        margin: 10px 0px;
+        pointer-events: none;
+        transition: 0.5s;
+        color: grey;
+    }
+    
+    .form .inputBox input[type="submit"] {
+        width: 100px;
+        background: #f95aa7;
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+    }
+    
+    .box i {
+        color: #f95aa7;
+    }
+    
+    @media (max-width: 991px) {
+        .contact {
+            padding: 50px;
+        }
+        .container {
+            flex-direction: column;
+        }
+        .container .info {
+            margin-bottom: 40px;
+        }
+    
+        .container .info,
+        .form {
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>If you have any problem, feel free to contact us.....</p>
+        </div>
+        <div class="container">
+            <div class="info">
+                <div class="box">
+                    <div class="icon"><i class='bx bxs-map'></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Newtown, Kolkata:- 700001 </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class='bx bxs-envelope' ></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>koustavde8@gmail.com</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class='bx bxs-phone' ></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>22-5555-4444</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <form>
+                    <h2>Send messages</h2>
+                    <div class="inputBox">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" placeholder="Email" required>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type your message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

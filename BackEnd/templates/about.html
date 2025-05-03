@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #f2f2f2;
+    }
+    
+    .heading {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 20px auto;
+    }
+    
+    .heading h1 {
+        font-size: 50px;
+        color: #000;
+        margin-bottom: 25px;
+        position: relative;
+        color: #fd0000;
+    }
+    
+    .heading h1::after {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        display: block;
+        margin: 0 auto;
+        background-color: #f95aa7;
+    }
+    
+    .heading p {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 35px;
+    }
+    
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+    
+    .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .about-img {
+        flex: 1;
+        margin-right: 40px;
+        overflow: hidden;
+    }
+    
+    .about-img img {
+        width: 95%;
+        height: auto;
+        display: block;
+        transition: 0.5s ease;
+    }
+    
+    .about-img img:hover {
+        transform: scale(1.2);
+    }
+    
+    .about-content {
+        flex: 1;
+    }
+    
+    .about-content h2 {
+        font-size: 23px;
+        margin-bottom: 15px;
+        color: #fd0000;
+    }
+    
+    .about-content p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #666;
+    }
+    
+    .about-content .read-more {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #f95aa7;
+        font-size: 19px;
+        text-decoration: none;
+        border-radius: 25px;
+        margin-top: 15px;
+        transition: 0.3s ease;
+    }
+    
+    .about-content .read-more:hover {
+        background-color: #fd0000;;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .heading {
+            padding: 0px 20px;
+        }
+        .heading h1 {
+            font-size: 36px;
+        }
+        .heading p {
+            font-size: 17px;
+            margin-bottom: 0px;
+        }
+        .container {
+            padding: 0px;
+        }
+        .about {
+            padding: 20px;
+            flex-direction: column;
+        }
+        .about-img {
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+        .about-content p {
+            padding: 0px;
+            font-size: 16px;
+        }
+        .about-content .read-more {
+            font-size: 16px;
+        }
+    }
+</style>
+<body>
+    <div class="heading">
+        <h1>About Us</h1>
+        <p>Welcome to MedAI, MedAI system designed to assist users in identifying 
+            diseases based on their symptoms. </p>
+    </div>
+    <div class="container">
+        <section class="about">
+            <div class="about-img">
+                <img src="{{ url_for('static', filename='about.jpeg') }}" alt="About image">
+            </div>
+            <div class="about-content">
+                <h2>What is MedAI!!</h2>
+                <p> MedAI aims to empower users with accessible health information and promote 
+                    proactive health management.The system utilizes advanced algorithms to 
+                    process user-input symptoms and outputs critical information, including disease 
+                    diagnosis, detailed descriptions, precautionary measures, recommended 
+                    medications, suitable workout routines, and dietary suggestions.</p>
+                <a href="" class="read-more">Read More</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
